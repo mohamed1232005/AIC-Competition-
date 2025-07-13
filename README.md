@@ -78,7 +78,7 @@ We use **task-specific classifiers** for optimal performance:
 - **Model**: `XGBClassifier` (Extreme Gradient Boosting)
 - **Preprocessing**: `StandardScaler` for normalization
 
-Both classifiers use `LabelEncoder` to convert class labels into numerical format.
+Both classifiers use `LabelEncoder` to convert class labels into a numerical format.
 
 ---
 
@@ -98,7 +98,7 @@ Ensure the following Python libraries are installed:
 pip install numpy pandas scipy matplotlib seaborn scikit-learn mne xgboost
 
 
-## 🚀 How to Run
+### 🚀 How to Run
 1. Set up the Dataset
 Ensure the mtcaic3 dataset is downloaded and located in:
 
@@ -132,7 +132,7 @@ Split by Task:
 
 Separate MI and SSVEP data
 
-## Train Models:
+### Train Models:
 
 Fit RandomForestClassifier (MI), XGBClassifier (SSVEP)
 
@@ -140,10 +140,9 @@ Evaluate Accuracy
 
 Generate Predictions on the test set
 
-Submit: Create submission.csv with predictions
 
 
-## 🧠 Future Improvements
+### 🧠 Future Improvements
 Integrate deep learning models like EEGNet for end-to-end learning [3].
 
 Implement cross-validation instead of a static train/validation split.
