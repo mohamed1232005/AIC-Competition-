@@ -98,7 +98,7 @@ Ensure the following Python libraries are installed:
 pip install numpy pandas scipy matplotlib seaborn scikit-learn mne xgboost
 
 
-### 🚀 How to Run
+## 🚀 How to Run
 1. Set up the Dataset
 Ensure the mtcaic3 dataset is downloaded and located in:
 
@@ -142,7 +142,7 @@ Generate Predictions on the test set
 
 
 
-### 🧠 Future Improvements
+#  🧠 Future Improvements
 Integrate deep learning models like EEGNet for end-to-end learning [3].
 
 Implement cross-validation instead of a static train/validation split.
