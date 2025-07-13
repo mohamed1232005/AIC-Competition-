@@ -1,5 +1,8 @@
 # AIC-Competition-
 EEG Signal Classification for Brain-Computer Interfaces (BCI)OverviewThis repository presents a solution for classifying Electroencephalography (EEG) signals, specifically designed for Brain-Computer Interface (BCI) applications. Our project focuses on distinguishing between two primary EEG paradigms: Steady-State Visual Evoked Potentials (SSVEP) and Motor Imagery (MI). Our work involves processing multi-channel EEG recordings, extracting relevant features, and training machine learning models to accurately identify visual stimulus frequencies (for SSVEP) and motor imagery categories (for MI).Project GoalThe main objective of this project is to develop robust and accurate AI models for the classification of EEG signals. By effectively classifying these signals, we aim to contribute to the advancement of non-invasive BCI systems, which hold significant potential for communication and control applications.DatasetThe project utilizes a dataset comprising multi-channel EEG recordings. The data is organized with train.csv, validation.csv, and test.csv files serving as metadata indices. These index files point to individual EEGdata.csv files, each containing raw EEG signals for a specific trial. The directory structure is as follows:/kaggle/input/mtcaic3/
+
+
+
 ├── sample_submission.csv
 ├── README.md
 ├── validation.csv
@@ -25,6 +28,10 @@ EEG Signal Classification for Brain-Computer Interfaces (BCI)OverviewThis reposi
     └── train/
         ├── S1/1/EEGdata.csv
         └── ...
+
+
+
+
 
 
 #Methodology
