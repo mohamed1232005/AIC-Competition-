@@ -1,8 +1,9 @@
 # AIC-Competition-
-EEG Signal Classification for Brain-Computer Interfaces (BCI)OverviewThis repository presents a solution for classifying Electroencephalography (EEG) signals, specifically designed for Brain-Computer Interface (BCI) applications. Our project focuses on distinguishing between two primary EEG paradigms: Steady-State Visual Evoked Potentials (SSVEP) and Motor Imagery (MI). Our work involves processing multi-channel EEG recordings, extracting relevant features, and training machine learning models to accurately identify visual stimulus frequencies (for SSVEP) and motor imagery categories (for MI).Project GoalThe main objective of this project is to develop robust and accurate AI models for the classification of EEG signals. By effectively classifying these signals, we aim to contribute to the advancement of non-invasive BCI systems, which hold significant potential for communication and control applications.DatasetThe project utilizes a dataset comprising multi-channel EEG recordings. The data is organized with train.csv, validation.csv, and test.csv files serving as metadata indices. These index files point to individual EEGdata.csv files, each containing raw EEG signals for a specific trial. The directory structure is as follows:/kaggle/input/mtcaic3/
+EEG Signal Classification for Brain-Computer Interfaces (BCI) This repository presents a solution for classifying Electroencephalography (EEG) signals, specifically designed for Brain-Computer Interface (BCI) applications. Our project focuses on distinguishing between two primary EEG paradigms: Steady-State Visual Evoked Potentials (SSVEP) and Motor Imagery (MI). Our work involves processing multi-channel EEG recordings, extracting relevant features, and training machine learning models to accurately identify visual stimulus frequencies (for SSVEP) and motor imagery categories (for MI). The main objective of this project is to develop robust and accurate AI models for the classification of EEG signals. By effectively classifying these signals, we aim to contribute to the advancement of non-invasive BCI systems, which hold significant potential for communication and control applications.The project utilizes a dataset comprising multi-channel EEG recordings. The data is organized with train.csv, validation.csv, and test.csv files serving as metadata indices. These index files point to individual EEGdata.csv files, each containing raw EEG signals for a specific trial. The directory structure is as follows:
 
 
 
+/kaggle/input/mtcaic3/
 ├── sample_submission.csv
 ├── README.md
 ├── validation.csv
@@ -69,7 +70,7 @@ The unique elements from the upper triangle of this correlation matrix (excludin
 
 ## Common Spatial Pattern (CSP) Features:
 
-CSP is a powerful spatial filtering technique particularly effective for MI tasks. It learns spatial filters that maximize the variance of one class while minimizing the variance of another, thereby enhancing the discriminability of different mental states. This is specifically applied to the MI task data.
+CSP is a powerful spatial filtering technique, particularly effective for MI tasks. It learns spatial filters that maximize the variance of one class while minimizing the variance of another, thereby enhancing the discriminability of different mental states. This technique is specifically applied to MI task data.
 
 ## 3. Model Training
 Recognizing the distinct characteristics of SSVEP and MI signals, we employ a strategy of training separate classification models for each task:
@@ -83,12 +84,12 @@ LabelEncoder is utilized to convert the categorical labels (e.g., 'Left', 'Right
 ## 4. Prediction and Submission
 After training, the respective models are used to predict labels for the held-out test set.
 
-The predictions from both MI and SSVEP models are combined.
+The predictions from both the MI and SSVEP models are combined.
 
-Finally, a submission.csv file is generated, containing the id of each test trial and its corresponding predicted label, formatted as required for submission.
+Finally, a submission.csv file is generated, containing the ID of each test trial and its corresponding predicted label, formatted as required for submission.
 
 # Evaluation
-The primary evaluation metric for this project is the mean classification accuracy over a held-out test set. This metric is computed separately for SSVEP and MI trials and then averaged, ensuring a balanced assessment of performance across both paradigms.
+The primary evaluation metric for this project is the mean classification accuracy over a held-out test set. This metric is computed separately for SSVEP and MI trials and then averaged to ensure a balanced assessment of performance across both paradigms.
 
 # Dependencies
 To run this project, you will need the following Python libraries:
@@ -133,7 +134,7 @@ Split Data by Task: Separate the prepared data into MI and SSVEP subsets.
 
 Encode Labels: Initialize and fit LabelEncoder for MI and SSVEP labels.
 
-Train Models: Train the RandomForestClassifier for MI and XGBClassifier for SSVEP.
+Train Models: Train the RandomForestClassifier for MI and the XGBClassifier for SSVEP.
 
 Evaluate Models: Calculate and print validation accuracies for both tasks and overall.
 
